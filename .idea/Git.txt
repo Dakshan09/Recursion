@@ -1,0 +1,153 @@
+public class Recursion {
+    public static void main(String[] args) {
+        int ans = fib(3);
+        System.out.println(ans);
+    }
+
+    //Fibonacci Sequence
+    static int fib(int n){
+        if(n<2){
+            return n;
+        }
+        return fib(n-1)+fib(n-2);
+    }
+}
+class Numbers{
+    public static void main(String[] args) {
+     Print(1) ;
+    }
+    static void Print(int n){
+        if(n==6){
+            System.out.println(6);
+            return;
+        }
+        System.out.println(n);
+        Print(n + 1);
+    }
+}
+
+class Numbers1{
+    public static void main(String[] args) {
+        Print(5);
+    }
+    static void Print(int n){
+        if(n == 0){
+            return;
+        }
+        System.out.println(n);
+        Print(n-1);
+    }
+}
+class Factorial{
+    public static void main(String[] args) {
+       int ans =  fact(5);
+        System.out.println(ans);
+    }
+    static int fact(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        return n * fact(n - 1);
+    }
+}
+class DigitsSum {
+    public static void main(String[] args) {
+      int ans  = sum(1342);
+        System.out.println(ans);
+    }
+    static int sum(int n){
+        if(n == 0){
+            return 0;
+        }
+        int rem = n%10;
+        return sum(n/10) + rem;
+    }
+}
+class Sub{
+    public static void main(String[] args) {
+    diff(5);
+    }
+    static void diff(int n ){
+        if(n == 0){
+            return ;
+        }
+        System.out.println(n);
+        diff(--n);
+    }
+}
+class Reverse{
+    public static void main(String[] args) {
+        System.out.println(Rev2(1234321));
+    }
+    static int sum =0;
+    static void Rev1(int n){
+       if(n == 0){
+           return ;
+       }
+       int rem = n%10;
+       sum = sum * 10 + rem;
+       Rev1(n/10);
+    }
+//    Reverse Method Two
+
+
+    static int Rev2(int n){
+        int digits = (int)(Math.log10(n))+1;
+        return helper(n,digits);
+    }
+    private static int helper(int n, int digits) {
+        if(n%10 == n){
+            return n;
+        }
+        int rem = n % 10;
+        return rem*(int)Math.pow(10,digits-1)+helper(n/10,digits-1);
+    }
+}
+class PalindromeR {
+    public static void main(String[] args) {
+        System.out.println(palin(1234321));
+    }
+    static int Rev2(int n) {
+        int digits = (int) (Math.log10(n)) + 1;
+        return helper(n, digits);
+    }
+    private static int helper(int n, int digits) {
+        if (n % 10 == n) {
+            return n;
+        }
+        int rem = n % 10;
+        return rem * (int) Math.pow(10, digits - 1) + helper(n / 10, digits - 1);
+    }
+    static boolean palin(int n)
+    {
+        return(n == Rev2(n)) ;
+    }
+}
+class NumofZeros{
+    public static void main(String[] args) {
+     int ans = zeros(30204000,0);
+        System.out.println(ans);
+    }static int zeros(int n,int count){
+        if(n == 0){
+            return count;
+        }
+        if(n%10 == 0){
+            return zeros(n/10,count+1);
+        }
+            return zeros(n/10,count);
+    }
+}
+class NumofSteps{
+    public static void main(String[] args) {
+        System.out.println(steps(14,0));
+    }
+    static int steps(int n,int steps){
+      if(n == 0){
+          return steps;
+      }
+      if(n%2 == 0){
+         return steps(n/2,steps+1);
+      }
+         return steps(n-1,steps+1);
+    }
+}
