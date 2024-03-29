@@ -1,0 +1,339 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+import static java.lang.Math.*;
+
+public class Practice {
+    public static void main(String[] args) {
+        int a = -5;
+        int b = 8;
+        int c = 6;
+        int d = a + b* c;
+        System.out.println("The result is : "+d);
+
+        int num = 5;
+        int num1 = 15;
+        int num2 = 3;
+        int num4 = 2;
+        int num5 = 8;
+        int result =num+num1/num2*num4-num5%num2;
+        System.out.println("The result is : "+result);
+    }
+}
+
+class Input{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int firstnum = input.nextInt();
+        System.out.println("First number is :");
+        System.out.println(firstnum);
+
+        int secondnum = input.nextInt();
+        System.out.println("Second number is :");
+        System.out.println(secondnum);
+        System.out.println("The Result is : "+ firstnum*secondnum);
+        System.out.println("Completed");
+
+//  sum 2
+    int num1 = input.nextInt();
+    int num2 = input.nextInt();
+    int num = num1+num2;
+        System.out.println("Addition of two numbers : "+ num);
+       int num3 = num1 - num2;
+        System.out.println("Subraction of two numbers : "+num3);
+        System.out.println("Multiplication of two numbers : "+num1*num2);
+        System.out.println("Division of two numbers : "+num1/num2);
+        System.out.println("Modulus of two numbers : "+num1%num2);
+
+
+//  Tables
+
+    int tables = input.nextInt();
+        System.out.println("Find the multiplication of :"+tables);
+        int i;
+        for (i=1;i<=10;i++){
+            System.out.println(tables +" x "+i+" = "+(tables * i));
+        }
+
+    }
+}
+
+class experssion {
+    public static void main(String[] args) {
+        System.out.println((25.5*3.5-3.5*3.5)/(40.5-4.5));
+        System.out.println(4.0*(1-(1.0/3)+(1.0/5)-(1.0/7)+(1.0/9)-(1.0/11)));
+
+    }
+}
+
+class circle {
+    public static void main(String[] args) {
+       double Radius = 7.5;
+
+            double perimeter= 2*Math.PI * Radius ;
+            System.out.println(perimeter);
+
+            double area = Math.PI* Radius* Radius;
+            System.out.println(area);
+
+
+
+    }
+
+ }
+ class rectangle{
+     public static void main(String[] args) {
+       double Width = 5.5;
+       double Height = 8.5;
+
+       double area = Width * Height;
+         System.out.println("Area of the Rectangle is : "+area);
+
+       double perimeter = 2*Width + Height;
+         System.out.println("Perimeter of the Rectangle: "+perimeter);
+     }
+ }
+
+class swap{
+    public static void main(String[] args) {
+        int a = 19;
+        int b = 20;
+        System.out.println("Before swapping:" +a+","+b);
+//        inter change
+
+        int temp;
+        temp = a;
+        a = b;
+        b = temp;
+        System.out.println("After swapping : "+a+","+b);
+    }
+}
+class pattern{
+    public static void main(String[] args) {
+        System.out.println("  +\" \" \" \" \" \" + ");
+        System.out.println("["+" |   o   o    |"+"]");
+        System.out.println( "  |     ^      |");
+        System.out.println( "  |    '_'     |");
+        System.out.println( "  +------------+");
+    }
+}
+class binary{
+    public static void main(String[] args) {
+        Scanner Input = new Scanner(System.in);
+        int bione = Input.nextInt();
+        int bitwo = Input.nextInt();
+        String x = Integer.toBinaryString(bione);
+        System.out.println(x);
+        int b1 = Integer.parseInt(x);
+        String y = Integer.toBinaryString(bitwo);
+        System.out.println(y);
+        int b2 = Integer.parseInt(y);
+        int Result = b1 * b2;
+        System.out.println(Result);
+    }
+    }
+     // ?????????
+
+    class conversion{
+        public static void main(String[] args) {
+            Scanner Input = new Scanner(System.in);
+
+            //to octalnumber
+            System.out.println("The Decimal number is :" );
+            int num = Input.nextInt();
+            String x = Integer.toOctalString(num);
+            System.out.println("Result : "+x);
+            // to hexadecimal
+            System.out.println("The decimal number is :");
+            int num1 = Input.nextInt();
+            String y = Integer.toHexString(num1);
+            System.out.println("Result 2: "+y);
+
+
+
+
+        }
+    }
+//installation
+
+class install{
+    public static void main(String[] args) {
+        System.out.println("Java Version:" + System.getProperty("java.version"));
+        System.out.println("Java Runtime Version:"+System.getProperty("java.runtime.version"));
+        System.out.println("Java Home:"+System.getProperty("java.home"));
+        System.out.println("Java vendor:"+System.getProperty("java.vendor"));
+        System.out.println("Java Vendor oracle :"+System.getProperty("java.vendor.oracle"));
+        System.out.println("Java Class Path:"+System.getProperty("java.class.path"));
+    }
+}
+
+class comparison{
+    public static void main(String[] args) {
+        Scanner Input = new Scanner(System.in);
+        System.out.println("The first number is:");
+        int num1 = Input.nextInt();
+
+        System.out.println("The second number is:");
+        int num2 = Input.nextInt();
+
+        if(num1<num2)
+            System.out.printf("%d > %d",num1,num2);
+
+        System.out.println(" ");
+
+        if(num1!=num2)
+            System.out.printf("%d != %d",num1,num2);
+
+        System.out.println(" ");
+
+        if(num1<=num2)
+            System.out.printf("%d <= %d",num1,num2);
+
+
+    }
+}
+
+//Binary conversion
+class Binary{
+    public static void main(String[] args) {
+        Scanner Input = new Scanner(System.in);
+        System.out.println("Going to convert this: ");
+        int num = Input.nextInt();
+        String binary = "";
+        int remainder;
+        while (num != 0){
+            remainder = num%2;
+            num/=2;
+            binary+= remainder;
+        }
+        System.out.println(binary);
+    }
+
+}
+
+//Decimal conversion
+class Decimal{
+    public static void main(String[] args) {
+        Scanner Input = new Scanner(System.in);
+        System.out.println("Going to convert this: ");
+        int num = Input.nextInt();
+        int Decimal = 0;
+        int n = 0;
+
+        while (num != 0){
+            int temp = num%10;
+            num/=10;
+            Decimal+= temp*Math.pow(2,n);
+            n++;
+        }
+        System.out.println(Decimal);
+    }
+
+}
+
+class Con{
+    public static void main(String[] args) {
+        Scanner Input = new Scanner(System.in);
+        System.out.println("Binary number is :");
+        int num = Input.nextInt();
+        int n =0;
+        int Decimal = 0;
+
+        while(num >0){
+            int rem = num%10;
+            num/= 10;
+            Decimal+= rem*Math.pow(2,n);
+            n++;
+        }
+        System.out.println("The decimal number is: "+Decimal);
+    }
+}
+
+class Polygen{
+    public static void main(String[] args) {
+        Scanner Input = new Scanner(System.in);
+        System.out.println("The number of sides is:");
+        int sides = Input.nextInt();
+        System.out.println("The length of the side is:");
+        int length = Input.nextInt();
+
+        double numerator = (sides*length*length);
+        double denaminator = (4*Math.tan(Math.PI/sides));
+
+        double area = numerator/denaminator;
+
+        System.out.println("Area of the polygen is:"+area);
+    }
+}
+class Distance {
+    public static void main(String[] args) {
+        double x1 = 1.25;
+        double y1 = 1.35;
+        double x2 = 35.5;
+        double y2 = 25.5;
+
+
+        x1 = Math.toRadians(x1);
+        x2 = Math.toRadians(x2);
+        y1 = Math.toRadians(y1);
+        y2 = Math.toRadians(y2);
+        double y =y1-y2;
+        y = Math.toRadians(y);
+
+
+        Scanner Input = new Scanner(System.in);
+        System.out.println("The radius of the Earth is : ");
+        double Radius = Input.nextDouble();
+
+// Formula
+
+        double distance = Radius * Math.cos(Math.sin(x1) * Math.sin(x2) + Math.cos(x1) * Math.cos(x2) * Math.cos(y));
+        System.out.println("The Distance between two points is: " + distance);
+
+
+    }
+}
+class Palindrome{
+    public static void main(String[] args) {
+        int rem, sum = 0, temp;
+        int Num = 123454321;
+        temp = Num;
+        while (Num > 0) {
+            rem = Num % 10;
+            sum = sum * 10 + rem;
+            Num = Num / 10;
+        }
+
+        if (temp == sum) {
+            System.out.println("Yes it is a Palindrome");
+        }
+        else {
+            System.out.println("No it is not a Palindrome");
+        }
+    }
+}
+/*class Solution {
+    public static void main(String[] args) {
+        int n = nums.length();
+        int ans = twoSum({2,7,11,17},9);
+    }
+    public int[] twoSum(int[] nums, int target) {
+        // Addition
+        for(i=0;i>=n;i++){
+                for(j=i+1;j>=n;j++){
+                    if(nums[i]+nums[j] == target){
+                        return new int[]{i,j};
+                    }
+                    return int[];
+                }
+            }
+ }
+}
+ */
+
+
+
+
+
+
+
